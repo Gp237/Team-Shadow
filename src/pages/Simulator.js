@@ -42,7 +42,7 @@ const Simulator = () => {
         <PrimaryStep
           stepHeaders={stepHeaders}
           canClickForward={false}
-          title={"Follow steps"}
+          title={"Follow these steps to make a simulation"}
         />
         {pageSelected}
       </div>
