@@ -14,7 +14,7 @@ const Home = () => {
       </div>
       <div className="sim_btn">
         <h2>Start the simulator</h2>
-        <Link to="/simulator">
+        <Link to="/upload">
           <div className="icons">
             <ArrowRight2 size="32" color="#FFF" />
             <ArrowRight2 size="32" color="#FFF" />
