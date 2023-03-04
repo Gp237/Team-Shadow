@@ -17,7 +17,7 @@ const headerTitles = [
 
 const Table = () => {
   const { stepData } = useSelector((state) => state.public);
-  console.log(stepData);
+
   return (
     <div className="main_table">
       <table>
