@@ -1,7 +1,7 @@
 @use "../utilities/mixins" as *;
 
 .add_page {
-  background-color: #b9b1b1;
+  background-color: #fff;
   @include flexcenter;
   height: 100vh;
   gap: 5rem;
