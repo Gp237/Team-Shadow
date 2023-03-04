@@ -9,7 +9,7 @@ const Home = () => {
         <h1>
           Are you tired of buying groceries or food products that have been
           sitting on the shelf for too long? With Food Tracker you can easily
-          check if a good have been stored illegaly or not
+          check if a good have been stored illegaly or not.
         </h1>
       </div>
       <div className="sim_btn">
