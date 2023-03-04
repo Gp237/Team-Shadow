@@ -1,0 +1,17 @@
+//------------------------------- UTILITIES --------------------------------//
+@forward "./utilities/variables";
+@forward "./utilities/mixins";
+@forward "./utilities/typography";
+
+//--------------------------------- COMPONENTS -----------------------------------//
+@forward "./components/input/index";
+@forward "./components/form/index";
+@forward "./components/utils/index";
+@forward "./components/button/index";
+@forward "./components/navbar/index";
+@forward "./components/modal/index";
+
+@forward "./components/step/index";
+
+//--------------------------------- PAGE -----------------------------------//
+@forward "./pages/home";

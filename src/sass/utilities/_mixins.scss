@@ -1,0 +1,34 @@
+//------------------------------ HELPERS ---------------------------------//
+@mixin flexcenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+//---------------------------------MEDIA QUERIES--------------------------//
+$width: 500px;
+$width1: 750px;
+$width2: 950px;
+$width3: 1200px;
+
+@mixin computer{
+    @media(min-width: #{$width3}){
+        @content
+    }
+};
+@mixin notebook {
+    @media(min-width: #{$width2}){
+        @content
+    }
+};
+
+@mixin tablet{
+    @media(max-width: #{$width1}){
+        @content
+    }
+};
+@mixin mobile{
+    @media(min-width: #{$width}){
+        @content
+    }
+};

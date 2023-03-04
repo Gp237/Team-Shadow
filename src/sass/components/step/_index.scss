@@ -1,0 +1,68 @@
+@use "../../utilities/variables" as *;
+@use "../../utilities/mixins" as *;
+.step_box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  width: 350px;
+  height: max-content;
+  h2{
+    font-size: 24px;
+    font-weight: bold;
+    color: #141522;
+    text-transform: capitalize;
+    line-height: 36px;
+    margin-bottom: 30px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .nav-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 8px;
+      cursor: pointer;
+      gap: 20px;
+      padding: 13px 20px;
+      width: 290px;
+      .step_number {
+        border-radius: 50%;
+        border: 1px solid #9c9ca4;
+        width: 24px;
+        height: 24px;
+        @include flexcenter;
+        color: #9c9ca4;
+        font-size: 12px;
+      }
+      
+      .step_description {
+        font-weight: 600;
+        text-transform: capitalize;
+        color: #9c9ca4;
+      }
+      &.active {
+        background-color: #f5f5f7;
+        .step_number {
+          background-color: $main-black-actived;
+          color: #fff;
+        }
+        .step_description {
+          color: $main-black-actived;
+        }
+      }
+    }
+    .divider{
+        @include flexcenter;
+        width: 1px;
+        height: 22px;
+        margin: 10px 0;
+        margin-left: 30px;
+        background-color: #9C9CA4;
+        &:last-child{
+            display: none;
+        }
+      }
+  }
+}

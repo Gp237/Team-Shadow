@@ -1,0 +1,46 @@
+.main__page {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  .main_title {
+    width: 50%;
+    margin: 5% auto;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5%;
+    h1 {
+      color: #fff;
+      letter-spacing: 1px;
+      text-transform: capitalize;
+      line-height: 58px;
+    }
+  }
+  .sim_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 10%;
+    gap: 2rem;
+    width: 100%;
+    .icons {
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

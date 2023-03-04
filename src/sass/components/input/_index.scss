@@ -1,0 +1,63 @@
+@use "../../utilities/variables" as *;
+@use "../../utilities/mixins" as *;
+
+.input_field {
+  border: 1px solid $secondary-white;
+  border-radius: 8px;
+  padding: 1rem;
+  height: 50px;
+  width: 385px;
+  &:focus {
+    border: 1px solid $main-black;
+  }
+}
+.textarea_input {
+  border: 1px solid $secondary-white;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 385px;
+  &:focus {
+    border: 1px solid $main-black;
+  }
+}
+.input_submit_field {
+  @extend .input_field;
+  background-color: $main-black;
+  color: $white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#password_field {
+  @extend .input_field;
+}
+.line_password {
+  position: relative;
+  .eye_icon {
+    position: absolute;
+    right: 1rem;
+    top: 0.8rem;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+  }
+}
+#confirm_password_field {
+  @extend #password_field;
+}
+#current_password_field {
+  @extend #password_field;
+}
+.select_field {
+  border: 1px solid $secondary-white;
+  border-radius: 8px;
+  height: 50px;
+  width: 385px;
+  @include flexcenter;
+  &:focus {
+    border: 1px solid $main-black;
+  }
+  select {
+    width: 95%;
+  }
+}

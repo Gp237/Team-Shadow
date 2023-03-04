@@ -1,0 +1,41 @@
+@use "../../utilities/variables" as *;
+
+.form_container {
+  flex-direction: column;
+  padding-top: 10%;
+  h1 {
+    width: 51%;
+    text-align: left;
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  .line {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    label {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+  .check_group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .line_checkbox {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 28px;
+        color: #9c9ca4;
+      }
+    }
+  }
+}

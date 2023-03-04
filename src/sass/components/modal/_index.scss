@@ -1,0 +1,95 @@
+@use "../../utilities/mixins" as *;
+
+.modal_window {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999999;
+  .modal_component {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    @include flexcenter;
+    flex-direction: column;
+    gap: 20px;
+    .modal__title {
+      @include flexcenter;
+      flex-direction: column;
+      h1 {
+        color: #141522;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 700;
+      }
+      p {
+        margin-top: 8px;
+        color: #9c9ca4;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .modal__button {
+      @include flexcenter;
+      gap: 20px;
+    }
+    .paidTitle {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      color: #141522;
+    }
+    .paidBody {
+      font-family: "Plus Jakarta Sans";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      text-align: center;
+      color: #9c9ca4;
+    }
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    @include flexcenter;
+    flex-direction: column;
+    gap: 20px;
+    .status_icon {
+      img {
+        width: 48px;
+        height: 48px;
+        border-radius: 76px;
+      }
+    }
+    .modal__title {
+      @include flexcenter;
+      flex-direction: column;
+      h1 {
+        color: #141522;
+        font-size: 18px;
+        line-height: 27px;
+        font-weight: 700;
+      }
+      p {
+        margin-top: 8px;
+        color: #9c9ca4;
+        font-weight: 500;
+        font-size: 14px;
+      }
+    }
+    .modal__button {
+      @include flexcenter;
+      gap: 20px;
+    }
+  }
+}

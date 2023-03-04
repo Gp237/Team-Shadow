@@ -1,0 +1,17 @@
+ @use '../../utilities/variables' as *;
+ @use '../../utilities/mixins' as *;
+#navbar{
+    padding: $main-padding;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $white;
+    .options{
+        @include flexcenter;
+        gap: 20px;
+    }
+}
+
+#secondary_navbar{
+    @extend #navbar;
+}
