@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { PrimaryStep } from "../components/step";
-import { Production } from "./stepPages";
+import { Production, Table } from "./stepPages";
 
 const stepHeaders = [
   {
     step: 0,
-    title: "Usine",
+    title: "Upload file",
   },
   {
     step: 1,
@@ -30,7 +30,7 @@ const Simulator = () => {
       case 1:
         return setPageSelected(<Production />);
       case 2:
-        return setPageSelected(<Production />);
+        return setPageSelected(<Table />);
 
       default:
         setPageSelected(<Production />);
@@ -39,11 +39,11 @@ const Simulator = () => {
   return (
     <div id="simulator">
       <div className="pages">
-        <PrimaryStep
+        {/* <PrimaryStep
           stepHeaders={stepHeaders}
           canClickForward={false}
-          title={"Follow these steps to make a simulation"}
-        />
+          // title={"Follow these steps to make a simulation"}
+        /> */}
         {pageSelected}
       </div>
     </div>

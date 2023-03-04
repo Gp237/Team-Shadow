@@ -1,24 +1,29 @@
 import React, { useState } from "react";
-import {
-  InputField,
-  InputWithLabelField,
-} from "./../../components/input/index";
+import { InputField } from "./../../components/input/index";
 import Papa from "papaparse";
+import { addStepData, updateStep } from "../../api/features/public";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Production = () => {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const { currentStep } = useSelector((state) => state.public);
+  const [data, setData] = useState([]);
+  const [isFileUp, setIsFileUp] = useState(false);
 
   const handleSubmit = () => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
+    dispatch(addStepData(data));
+    dispatch(updateStep(currentStep + 1));
+    setLoading(false);
   };
   function handleCSVFile(file) {
     Papa.parse(file, {
       header: true,
       complete: function (results) {
-        console.log(results);
+        setData(results);
+        setIsFileUp(true);
       },
     });
   }
@@ -26,33 +31,20 @@ const Production = () => {
   return (
     <div className="add_page">
       <div className="add_page_head">
-        <h3>Basic info</h3>
         <form className="form" autoComplete="off">
           <input
             type="file"
             onChange={(e) => handleCSVFile(e.target.files[0])}
           />
-          <div className="line">
-            <InputWithLabelField
-              type="text"
-              required={true}
-              label="Full Name"
+          <Link to={isFileUp ? "/table" : "/simulator"}>
+            <InputField
+              loading={loading}
+              type="button"
+              onClick={handleSubmit}
+              value="Continue"
+              style={{ backgroundColor: "#2B3651", width: "150px" }}
             />
-          </div>
-          <div className="line">
-            <InputWithLabelField
-              type="text"
-              required={true}
-              label="User Name"
-            />
-          </div>
-          <InputField
-            loading={loading}
-            type="button"
-            onClick={handleSubmit}
-            value="Continue"
-            style={{ backgroundColor: "#2B3651", width: "150px" }}
-          />
+          </Link>
         </form>
       </div>
     </div>
